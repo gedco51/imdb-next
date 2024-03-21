@@ -1,4 +1,20 @@
-import Results from '@/components/results';
+import Results from '@/Components/Results';
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
+ 
+function Search() {
+  const searchParams = useSearchParams()
+ 
+  return <input placeholder="Search..." />
+}
+ 
+export function Searchbar() {
+  return (
+    <Suspense>
+      <Search />
+    </Suspense>
+  )
+}
 
 export default async function SearchPage({ params }) {
   const seachTerm = params.searchTerm;
