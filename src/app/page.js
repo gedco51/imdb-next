@@ -1,5 +1,5 @@
 
-import Results from "@/components/Results";
+import Results from "@/components/results";
 
 const API_KEY = process.env.API_KEY;
 
