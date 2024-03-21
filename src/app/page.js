@@ -1,7 +1,8 @@
-import Results from '@/components/Results';
- 
+
+import Results from "@/Components/Results";
+
 const API_KEY = process.env.API_KEY;
- 
+
 export default async function Home({ searchParams }) {
   const genre = searchParams.genre || 'fetchTrending';
   const res = await fetch(
@@ -15,7 +16,7 @@ export default async function Home({ searchParams }) {
     throw new Error('Failed to fetch data');
   }
   const results = data.results;
- 
+
   return (
     <div>
       <Results results={results} />
