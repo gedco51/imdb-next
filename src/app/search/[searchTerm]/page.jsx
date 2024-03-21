@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Results from '@/components/Results';
+import Results from '@/components/results';
 
 function fetchData(searchTerm) {
   return fetch(

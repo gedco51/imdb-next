@@ -1,5 +1,5 @@
 
-import Results from "@/Components/Results";
+import Results from "@/components/results";
 import { Suspense } from 'react'
 
 const API_KEY = process.env.API_KEY;
