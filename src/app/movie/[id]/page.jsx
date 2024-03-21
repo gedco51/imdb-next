@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import { Suspense } from 'react';
 
 export default async function MoviePage({ params }) {
   const movieId = params.id;
@@ -9,6 +10,7 @@ export default async function MoviePage({ params }) {
   const movie = await res.json();
 
   return (
+    <Suspense>
     <div className='w-full'>
       <div className='p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6'>
         <Image
@@ -36,5 +38,6 @@ export default async function MoviePage({ params }) {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }
