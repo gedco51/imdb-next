@@ -23,7 +23,7 @@ export default function MoviePage({ params }) {
   );
 }
 
-function MovieContent({ moviePromise }) {
+async function MovieContent({ moviePromise }) {
   const movie = await moviePromise;
 
   return (
