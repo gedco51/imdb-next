@@ -23,8 +23,8 @@ export default function MoviePage({ params }) {
   );
 }
 
-async function MovieContent({ moviePromise }) {
-  const movie = await moviePromise;
+function MovieContent({ moviePromise }) {
+  
 
   return (
     <div className='p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6'>
