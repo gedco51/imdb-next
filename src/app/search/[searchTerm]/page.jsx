@@ -1,4 +1,5 @@
 import Results from '@/components/Results';
+import { Suspense } from 'react';
 
 export default async function SearchPage({ params }) {
   const seachTerm = params.searchTerm;
@@ -8,11 +9,13 @@ export default async function SearchPage({ params }) {
   const data = await res.json();
   const results = data.results;
   return (
-    <div>
+   <Suspense>
+     <div>
       {results &&
         results.length ===
         <h1 className='text-center pt-6'>No results found</h1>}
       {results && <Results results={results} />}
-    </div>
+     </div>
+    </Suspense>
   );
 }
