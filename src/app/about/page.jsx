@@ -1,5 +1,4 @@
 import { Suspense } from 'react';
-import { useSearchParams } from 'your-search-params-library';
 
 export default function About() {
   return (
